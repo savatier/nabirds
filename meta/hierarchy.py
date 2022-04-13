@@ -1,6 +1,6 @@
 import pandas as pd
-from meta import HIERARCHY_FILE
 
+HIERARCHY_FILE = 'hierarchy.txt'
 
 def read_hierarchy(bird_dir):
     """Loads table of class hierarchies. Returns hierarchy table

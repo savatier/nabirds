@@ -1,6 +1,6 @@
 import pandas as pd
-from meta import CLASS_FILE
 
+CLASS_FILE = 'classes.txt'
 
 def read_classes(bird_dir, terminal_levels):
     """Loads DataFrame with class labels. Returns full class table

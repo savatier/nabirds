@@ -1,6 +1,6 @@
 import pandas as pd
-from meta import BOUNDING_BOX_FILE
 
+BOUNDING_BOX_FILE = 'bounding_boxes.txt'
 
 def read_boxes(bird_dir):
     """Loads DataFrame of bounding box data for each image.

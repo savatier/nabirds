@@ -1,6 +1,6 @@
 import pandas as pd
-from meta import SIZE_FILE
 
+SIZE_FILE = 'sizes.txt'
 
 def read_sizes(bird_dir):
     """Loads table of image sizes."""

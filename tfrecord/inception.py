@@ -1,6 +1,6 @@
 import tensorflow as tf
-from tfrecord import TARGET_DIMS
 
+TARGET_DIMS = [224, 240, 260, 300, 380, 456, 528, 600]
 
 def decode_jpeg(example,
                 category_count,

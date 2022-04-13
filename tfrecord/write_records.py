@@ -1,8 +1,9 @@
 import contextlib2
 import tensorflow as tf
 from .create_example import create_tf_example
-from tfrecord import TRAIN_DIR, TEST_DIR
 
+TRAIN_DIR = 'tf_train'
+TEST_DIR = 'tf_test'
 
 def open_sharded_output_tfrecords(exit_stack, base_path, num_shards):
     """Open tfrecord shard files to write record data.

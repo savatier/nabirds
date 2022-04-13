@@ -1,7 +1,7 @@
 import tensorflow as tf
-from tfrecord import TARGET_DIMS
 from .inception import decode_jpeg
 
+TARGET_DIMS = [224, 240, 260, 300, 380, 456, 528, 600]
 
 def load_dataset(filenames,
                  category_count,

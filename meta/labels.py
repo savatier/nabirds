@@ -1,6 +1,6 @@
 import pandas as pd
-from meta import CLASS_LABEL_FILE
 
+CLASS_LABEL_FILE = 'image_class_labels.txt'
 
 def read_class_labels(bird_dir, top_levels, parent_map):
     """Loads table of image IDs and labels. Add top level ID to table."""

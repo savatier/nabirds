@@ -1,6 +1,6 @@
 import pandas as pd
-from meta import TRAIN_TEST_SPLIT_FILE
 
+TRAIN_TEST_SPLIT_FILE = 'train_test_split.txt'
 
 def read_train_test(bird_dir):
     """Load train test split."""

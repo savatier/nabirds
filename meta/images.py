@@ -1,6 +1,6 @@
 import pandas as pd
-from meta import IMAGE_FILE
 
+IMAGE_FILE = 'images.txt'
 
 def read_images(bird_dir):
     """Loads image table and converts to DataFrame
