@@ -1,4 +1,5 @@
 import argparse
+import glob
 import numpy as np
 import tensorflow as tf
 
@@ -37,7 +38,9 @@ def main():
     model = tf.keras.models.load_model(model_file,
                                        custom_objects={"top_2_accuracy": top_2_accuracy,
                                                        "top_5_accuracy": top_5_accuracy})
-    test_files = f"{args['dir']}/{TEST_DIR}/*"
+
+    test_files_path = f"{args['dir']}/{TEST_DIR}/*"
+    test_files = glob.glob(test_files_path)
     test_data = get_test_datasets(test_files, batch_size=batch_size,
                                   category_count=category_count,
                                   resolution=args["res"],

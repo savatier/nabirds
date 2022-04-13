@@ -1,5 +1,7 @@
 import argparse
 import tensorflow as tf
+import glob
+
 from meta import read_meta
 from enet import detect_hardware, get_callbacks, get_model
 from enet import get_optimizer, make_model_file, top_2_accuracy, top_5_accuracy
@@ -39,8 +41,14 @@ def main():
     train_meta, _ = read_meta(bird_dir=args["dir"])
     category_count = train_meta["terminal_id"].nunique()
 
-    train_files = f"{args['dir']}/{TRAIN_DIR}/*"
-    test_files = f"{args['dir']}/{TEST_DIR}/*"
+    train_files_path = f"{args['dir']}/{TRAIN_DIR}/*"
+    test_files_path = f"{args['dir']}/{TEST_DIR}/*"
+
+    train_files = glob.glob(train_files_path)
+    test_files = glob.glob(test_files_path)
+
+    print(train_files)
+    print(test_files)
 
     train_ds, test_ds = get_datasets(train_files=train_files,
                                      test_files=test_files,
