@@ -1,7 +1,7 @@
 import tensorflow as tf
 from .efficientnet import efficientnet
-from enet import DROPOUT
 
+DROPOUT = [0.2, 0.2, 0.3, 0.3, 0.4, 0.4, 0.5, 0.5]
 
 def make_model_file(args):
     """Constructs file name for saving model.

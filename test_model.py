@@ -1,10 +1,12 @@
 import argparse
 import numpy as np
 import tensorflow as tf
+
 from enet import detect_hardware, make_model_file, top_2_accuracy, top_5_accuracy
 from meta import read_meta
-from tfrecord import get_test_datasets, TEST_DIR
+from tfrecord import get_datasets
 
+TEST_DIR = 'tf_test'
 
 def main():
     """Evaluates selected model on NABirds Test data. Outputs accuracy to console."""

@@ -1,7 +1,8 @@
 import tensorflow as tf
 import tensorflow_addons as tfa
-from enet import EPSILON, MOMENTUM
 
+MOMENTUM = 0.9
+EPSILON = 1
 
 def get_optimizer(opt):
     """Returns the optimizer to use in training.

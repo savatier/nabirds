@@ -3,8 +3,10 @@ import tensorflow as tf
 from meta import read_meta
 from enet import detect_hardware, get_callbacks, get_model
 from enet import get_optimizer, make_model_file, top_2_accuracy, top_5_accuracy
-from tfrecord import get_datasets, TRAIN_DIR, TEST_DIR
+from tfrecord import get_datasets
 
+TRAIN_DIR = 'tf_train'
+TEST_DIR = 'tf_test'
 
 def main():
     """Builds and trains EfficientNet models for Cornell NABirds data."""
